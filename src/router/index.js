@@ -6,7 +6,6 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MapScreen from '../screens/MapScreen';
 import SearchScreen from '../screens/SearchScreen';
 import THEME from '../theme';
-import HeaderSearch from '../components/HeaderSearch';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,10 +34,10 @@ export default function Router() {
           name="Search"
           component={SearchScreen}
           options={{
+            headerShown: false,
             tabBarIcon: ({color}) => (
               <FontAwesome name="search" size={30} color={color} />
             ),
-            header: () => <HeaderSearch />,
           }}
         />
       </Tab.Navigator>

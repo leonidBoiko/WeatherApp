@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import THEME from '../../theme';
-import styles from './style';
+import styles from './styles';
 
 const Row = ({item}) => {
   return (
