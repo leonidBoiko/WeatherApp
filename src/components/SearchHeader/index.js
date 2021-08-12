@@ -5,8 +5,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import {weatherUrl} from '../../constants';
 import Row from './Row';
 import styles from './styles';
-
-const GOOGLE_PLACES_API_KEY = 'AIzaSyBl2tUhCgALkUYgfeTcIKtakqy_vSPy8P4';
+import {GOOGLE_PLACES_API_KEY} from '../../constants';
 
 const SearchHeader = ({dataList, setDataList, loading, setLoading}) => {
   const handleOnPress = async coords => {

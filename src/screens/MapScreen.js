@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
+import {weatherUrl, GOOGLE_PLACES_API_KEY} from '../constants';
 
 const MapScreen = () => {
   const [coords, setCoords] = useState(null);
@@ -8,7 +9,7 @@ const MapScreen = () => {
   const fetchData = useCallback(async () => {
     try {
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.latitude}&lon=${coords.longitude}&exclude=current,hourly,minutely,alerts&units=metric&appid=c04a4d83b9541e92adc8c0f91c9b5f43`,
+        weatherUrl({lat: coords.latitude, lng: coords.longitude}),
       );
       const data = await res.json();
       console.log(data.timezone);
@@ -20,6 +21,20 @@ const MapScreen = () => {
   useEffect(() => {
     fetchData();
   }, [coords, fetchData]);
+
+  const getLocation = async () => {
+    try {
+      const res = await fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=40.70556210999075,-73.99609632790089&key=${GOOGLE_PLACES_API_KEY}`,
+      );
+      const data = await res.json();
+      const resString = data.plus_code.compound_code.split(' ');
+      const filterStr = resString.slice(1, resString.length).join(' ');
+      console.log(filterStr);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -35,9 +50,10 @@ const MapScreen = () => {
         provider={PROVIDER_GOOGLE}>
         {coords && (
           <Marker
+            onPress={() => getLocation()}
             coordinate={coords}
-            title={'marker.title'}
-            description={'sad'}
+            title={`${coords.latitude}`}
+            description={`${coords.longitude}`}
           />
         )}
       </MapView>
