@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import {useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import {useDispatch, useSelector} from 'react-redux';
@@ -11,11 +12,18 @@ const MapScreen = () => {
   const {temp} = useSelector(state => state.temp);
   let markerRef = useRef(null);
 
+  useEffect(() => {
+    markerRef.current && markerRef.current.showCallout();
+  }, [location]);
+
+  useEffect(() => {
+    markerRef.current && markerRef.current.hideCallout();
+  }, [coords]);
+
   return (
     <View style={styles.container}>
       <MapView
         onLongPress={e => {
-          markerRef.current && markerRef.current.hideCallout();
           setCoords({
             ...e.nativeEvent.coordinate,
             latitudeDelta: 0.0922,
@@ -37,7 +45,7 @@ const MapScreen = () => {
             ref={markerRef}
             coordinate={coords}
             title={`${location}`}
-            description={`${temp}`}
+            description={`${temp} °C`}
           />
         )}
       </MapView>

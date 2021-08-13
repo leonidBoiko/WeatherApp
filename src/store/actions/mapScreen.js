@@ -27,8 +27,13 @@ export const fetchLocation = props => async dispatch => {
   try {
     const res = await fetch(locationUrl(props));
     const data = await res.json();
-    const resString = data.plus_code.compound_code.split(' ');
-    const filterStr = resString.slice(1, resString.length).join(' ');
+    const resString = data.plus_code.compound_code.split(',');
+    let firstStr = resString[0]
+      .split(' ')
+      .slice(1, resString[0].length)
+      .join(' ');
+    let lastStr = resString[resString.length - 1];
+    const filterStr = `${firstStr}, ${lastStr}`;
     dispatch({
       type: LOCATION_SUCCESS,
       payload: filterStr,
