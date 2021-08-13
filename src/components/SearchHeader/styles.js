@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flexDirection: 'row',
     alignItems: 'center',
+    elevation: 10,
   },
   input: {
     marginTop: 5,

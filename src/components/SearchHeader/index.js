@@ -16,16 +16,12 @@ const SearchHeader = () => {
       <GooglePlacesAutocomplete
         autoFocus={false}
         fetchDetails
-        placeholder="Search..."
+        placeholder="Type city name..."
         onPress={(_, details = null) => {
           dispatch(fetchWeatherData(details.geometry.location));
         }}
         styles={{
           textInput: styles.input,
-          poweredContainer: {
-            height: 0,
-            padding: 0,
-          },
         }}
         query={{
           key: GOOGLE_PLACES_API_KEY,
