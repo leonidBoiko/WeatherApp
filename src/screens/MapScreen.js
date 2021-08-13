@@ -14,7 +14,7 @@ const MapScreen = () => {
 
   useEffect(() => {
     markerRef.current && markerRef.current.showCallout();
-  }, [location]);
+  }, [location, temp]);
 
   useEffect(() => {
     markerRef.current && markerRef.current.hideCallout();
