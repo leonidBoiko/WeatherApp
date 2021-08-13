@@ -1,25 +1,25 @@
-import {SEARCH_ERROR, SEARCH_REQUEST, SEARCH_SUCCESS} from '../types';
+import {LOCATION_ERROR, LOCATION_REQUEST, LOCATION_SUCCESS} from '../types';
 
 const initialState = {
-  dataList: [],
+  location: null,
   loading: false,
   error: null,
 };
 
-export const searchReducer = (state = initialState, action) => {
+export const locationReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SEARCH_REQUEST:
+    case LOCATION_REQUEST:
       return {
         ...state,
         loading: true,
       };
-    case SEARCH_SUCCESS:
+    case LOCATION_SUCCESS:
       return {
         ...state,
-        dataList: [...action.payload],
+        location: action.payload,
         loading: false,
       };
-    case SEARCH_ERROR:
+    case LOCATION_ERROR:
       return {
         ...state,
         loading: false,

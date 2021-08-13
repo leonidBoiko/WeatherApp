@@ -1,9 +1,10 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import {mapReducer, searchReducer} from './reducers';
+import {searchReducer, locationReducer, currentTempReducer} from './reducers';
 
 const rootReducer = combineReducers({
-  map: mapReducer,
+  location: locationReducer,
+  temp: currentTempReducer,
   search: searchReducer,
 });
 

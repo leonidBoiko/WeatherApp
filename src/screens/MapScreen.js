@@ -1,54 +1,28 @@
 import React, {useState, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useSelector} from 'react-redux';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import {currentWeatherUrl, GOOGLE_PLACES_API_KEY} from '../constants';
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchLocation, fetchCurrentTemp} from '../store/actions/mapScreen';
 
 const MapScreen = () => {
-  // const [coords, setCoords] = useState(null);
-  const {coords} = useSelector(state => state.map);
-  const [location, setLocation] = useState(null);
-  const [temp, setTemp] = useState(null);
+  const [coords, setCoords] = useState(null);
+  const dispatch = useDispatch();
+  const {location} = useSelector(state => state.location);
+  const {temp} = useSelector(state => state.temp);
   let markerRef = useRef(null);
-
-  const fetchCurrentTemp = async ({latitude, longitude}) => {
-    try {
-      const res = await fetch(
-        currentWeatherUrl({lat: latitude, lng: longitude}),
-      );
-      const data = await res.json();
-      setTemp(data.current.temp);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const getLocation = async ({latitude, longitude}) => {
-    try {
-      const res = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_PLACES_API_KEY}`,
-      );
-      const data = await res.json();
-      const resString = data.plus_code.compound_code.split(' ');
-      const filterStr = resString.slice(1, resString.length).join(' ');
-      setLocation(filterStr);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return (
     <View style={styles.container}>
       <MapView
         onLongPress={e => {
           markerRef.current && markerRef.current.hideCallout();
-          // setCoords({
-          //   ...e.nativeEvent.coordinate,
-          //   latitudeDelta: 0.0922,
-          //   longitudeDelta: 0.0421,
-          // });
-          getLocation({...e.nativeEvent.coordinate});
-          fetchCurrentTemp({...e.nativeEvent.coordinate});
+          setCoords({
+            ...e.nativeEvent.coordinate,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          });
+          dispatch(fetchLocation({...e.nativeEvent.coordinate}));
+          dispatch(fetchCurrentTemp({...e.nativeEvent.coordinate}));
         }}
         initialRegion={{
           latitude: 50.49558653006826,

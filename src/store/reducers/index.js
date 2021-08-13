@@ -1,4 +1,5 @@
-import {mapReducer} from './map';
+import {locationReducer} from './location';
 import {searchReducer} from './search';
+import {currentTempReducer} from './currentTemp';
 
-export {mapReducer, searchReducer};
+export {locationReducer, searchReducer, currentTempReducer};
