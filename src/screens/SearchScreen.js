@@ -1,24 +1,19 @@
-import React, {useState} from 'react';
-import {View, FlatList} from 'react-native';
+import React from 'react';
+import {View, FlatList, Text} from 'react-native';
+import {useSelector} from 'react-redux';
+import ErrorIndicator from '../components/ErrorIndicator';
 import SearchHeader from '../components/SearchHeader';
 import SearchListItem from '../components/SearchListItem';
 import Spinner from '../components/Spinner';
 
 const SearchScreen = () => {
-  const [loading, setLoading] = useState(false);
-  const [dataList, setDataList] = useState([]);
-  const childProps = {
-    dataList,
-    setDataList,
-    loading,
-    setLoading,
-  };
+  const {dataList, loading, error} = useSelector(state => state.search);
 
   return (
     <View style={{paddingBottom: 80}}>
-      <SearchHeader {...childProps} />
-      {loading && <Spinner />}
-      {!loading && (
+      <SearchHeader />
+      {error ? <ErrorIndicator /> : loading && <Spinner />}
+      {!loading && !error && (
         <FlatList
           data={dataList}
           renderItem={({item}) => <SearchListItem item={item} />}

@@ -1,36 +1,37 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import {weatherUrl, GOOGLE_PLACES_API_KEY} from '../constants';
+import {currentWeatherUrl, GOOGLE_PLACES_API_KEY} from '../constants';
 
 const MapScreen = () => {
-  const [coords, setCoords] = useState(null);
+  // const [coords, setCoords] = useState(null);
+  const {coords} = useSelector(state => state.map);
+  const [location, setLocation] = useState(null);
+  const [temp, setTemp] = useState(null);
+  let markerRef = useRef(null);
 
-  const fetchData = useCallback(async () => {
+  const fetchCurrentTemp = async ({latitude, longitude}) => {
     try {
       const res = await fetch(
-        weatherUrl({lat: coords.latitude, lng: coords.longitude}),
+        currentWeatherUrl({lat: latitude, lng: longitude}),
       );
       const data = await res.json();
-      console.log(data.timezone);
+      setTemp(data.current.temp);
     } catch (error) {
       console.log(error);
     }
-  }, [coords]);
+  };
 
-  useEffect(() => {
-    fetchData();
-  }, [coords, fetchData]);
-
-  const getLocation = async () => {
+  const getLocation = async ({latitude, longitude}) => {
     try {
       const res = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?latlng=40.70556210999075,-73.99609632790089&key=${GOOGLE_PLACES_API_KEY}`,
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_PLACES_API_KEY}`,
       );
       const data = await res.json();
       const resString = data.plus_code.compound_code.split(' ');
       const filterStr = resString.slice(1, resString.length).join(' ');
-      console.log(filterStr);
+      setLocation(filterStr);
     } catch (error) {
       console.log(error);
     }
@@ -40,20 +41,29 @@ const MapScreen = () => {
     <View style={styles.container}>
       <MapView
         onLongPress={e => {
-          setCoords({
-            ...e.nativeEvent.coordinate,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          });
+          markerRef.current && markerRef.current.hideCallout();
+          // setCoords({
+          //   ...e.nativeEvent.coordinate,
+          //   latitudeDelta: 0.0922,
+          //   longitudeDelta: 0.0421,
+          // });
+          getLocation({...e.nativeEvent.coordinate});
+          fetchCurrentTemp({...e.nativeEvent.coordinate});
+        }}
+        initialRegion={{
+          latitude: 50.49558653006826,
+          longitude: 30.554091297090057,
+          latitudeDelta: 12.8,
+          longitudeDelta: 15.06,
         }}
         style={styles.map}
         provider={PROVIDER_GOOGLE}>
         {coords && (
           <Marker
-            onPress={() => getLocation()}
+            ref={markerRef}
             coordinate={coords}
-            title={`${coords.latitude}`}
-            description={`${coords.longitude}`}
+            title={`${location}`}
+            description={`${temp}`}
           />
         )}
       </MapView>
