@@ -1,12 +1,21 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Animated} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import {DAYS} from '../../constants';
 import styles from './styles';
 
-const SearchListItem = ({item: {day, night, date, color, id}}) => {
+const SearchListItem = props => {
+  const {
+    opacity,
+    scale,
+    item: {day, night, date, color, id},
+  } = props;
   return (
-    <View style={[styles.container, {backgroundColor: color}]}>
+    <Animated.View
+      style={[
+        styles.container,
+        {backgroundColor: color, transform: [{scale}], opacity},
+      ]}>
       <Text style={styles.title}>
         {id === 1 ? 'Today' : DAYS[date.getDay()]}
       </Text>
@@ -16,7 +25,7 @@ const SearchListItem = ({item: {day, night, date, color, id}}) => {
         <Feather name="moon" color="black" size={30} />
         <Text style={styles.text}>{night} °</Text>
       </View>
-    </View>
+    </Animated.View>
   );
 };
 
