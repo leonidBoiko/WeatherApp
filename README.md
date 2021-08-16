@@ -8,5 +8,5 @@ OpenWeathermap API
 
 ### APK file in:
 ```
-/android/app/build/outputs/apk/debug/app-debug.apk
+/android/app/build/outputs/apk/release/app-release.apk
 ```

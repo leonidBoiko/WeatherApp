@@ -1,0 +1,9 @@
+com/weatherapp/MainApplication.java
+ com.weatherapp.MainApplication
+ com.weatherapp.MainApplication$1
+com/weatherapp/BuildConfig.java
+ com.weatherapp.BuildConfig
+com/weatherapp/MainActivity.java
+ com.weatherapp.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
