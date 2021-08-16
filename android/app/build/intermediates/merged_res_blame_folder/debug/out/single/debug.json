@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_launch_screen.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xhdpi/launch_screen.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_launch_screen.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xxhdpi/launch_screen.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_feather.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_feather.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_ionicons.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_ionicons.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativegoogleplacesautocomplete_images_powered_by_google_on_white.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-mdpi/node_modules_reactnativegoogleplacesautocomplete_images_powered_by_google_on_white.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_app.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/app.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xxxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_node_modules_reactnativegoogleplacesautocomplete_images_powered_by_google_on_white.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xhdpi/node_modules_reactnativegoogleplacesautocomplete_images_powered_by_google_on_white.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/layout_launch_screen.xml.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/layout/launch_screen.xml"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_entypo.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_entypo.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnativegoogleplacesautocomplete_images_powered_by_google_on_white.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnativegoogleplacesautocomplete_images_powered_by_google_on_white.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/leonid/Education/react-native/WeatherApp/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/home/leonid/Education/react-native/WeatherApp/android/app/src/main/res/drawable-xhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    }
+]
