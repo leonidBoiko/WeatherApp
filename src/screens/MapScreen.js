@@ -45,7 +45,7 @@ const MapScreen = () => {
             ref={markerRef}
             coordinate={coords}
             title={`${location}`}
-            description={`${temp} °C`}
+            description={`${temp < 1 ? temp : `+ ${temp}`} °C`}
           />
         )}
       </MapView>

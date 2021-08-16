@@ -15,7 +15,7 @@ export const fetchCurrentTemp = props => async dispatch => {
     const data = await res.json();
     dispatch({
       type: CURRENT_TEMP_SUCCESS,
-      payload: data.current.temp,
+      payload: Math.round(data.current.temp),
     });
   } catch (error) {
     dispatch({type: CURRENT_TEMP_ERROR, payload: error});

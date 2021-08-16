@@ -15,9 +15,9 @@ const SearchListItem = props => {
       </Text>
       <View style={styles.descriptionWrap}>
         <Feather name="sun" color="yellow" size={30} />
-        <Text style={styles.text}>{day} °</Text>
+        <Text style={styles.text}>{day < 1 ? day : `+ ${day}`} °</Text>
         <Feather name="moon" color="black" size={30} />
-        <Text style={styles.text}>{night} °</Text>
+        <Text style={styles.text}>{night < 1 ? night : `+ ${night}`} °</Text>
       </View>
     </View>
   );

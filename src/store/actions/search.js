@@ -10,8 +10,8 @@ export const fetchWeatherData = coords => async dispatch => {
       return {
         id: idx + 1,
         date: new Date(item.dt * 1000),
-        day: item.temp.day,
-        night: item.temp.night,
+        day: Math.round(item.temp.day),
+        night: Math.round(item.temp.night),
         color: `#${idx}A69C0`,
       };
     });
