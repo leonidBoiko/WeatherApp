@@ -7,12 +7,12 @@ import SearchListItem from '../components/SearchListItem';
 import Spinner from '../components/Spinner';
 import THEME from '../theme';
 
-const SearchScreen = () => {
+const SearchScreen = ({route}) => {
   const {dataList, loading, error} = useSelector(state => state.search);
 
   return (
     <View style={styles.container}>
-      <SearchHeader />
+      <SearchHeader {...route.params} />
       {error ? <ErrorIndicator /> : loading && <Spinner />}
       {!loading && !error && (
         <FlatList
